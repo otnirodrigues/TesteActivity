@@ -1,11 +1,9 @@
 package com.teste;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class CalculadoraTest{
@@ -16,7 +14,6 @@ public class CalculadoraTest{
 	public void setupCalc() {
 		calc = new Calculadora();
 	}
-	
 	
 	@AfterClass
 	public static void tearDownCalc() {
@@ -31,7 +28,6 @@ public class CalculadoraTest{
 		assertEquals("Soma 2 + 2", result, add);
 	}
 
-	@Ignore
 	@Test
 	public void testSubtrair() {
 		int result = 1;
@@ -39,7 +35,6 @@ public class CalculadoraTest{
 		assertEquals("Subtração 2 - 1", result, sub);
 	}
 
-	@Ignore
 	@Test
 	public void testMultiplicar() {
 		int result = 2;
@@ -47,18 +42,19 @@ public class CalculadoraTest{
 		assertEquals("Multiplicação 2 * 1", result, mult);
 	}
 	
-	@Test(timeout = 100)
-	public void testDividir() {
+	@Test()
+	public void testDividirPorZero() {
 		try {
 			calc.dividir(2,0);
-			fail("Deverá lançar uma exceção");
 		}catch(ArithmeticException e) {
 			System.out.println("Exceção Lançada");
 		}
 	}
 	
-	@Test(timeout = 100)
-	public void testTime() {
-		while (true);
+	@Test()
+	public void testDividir() {
+		int result = 2;
+		int div = calc.dividir(2,1);
+		assertEquals("Divisão 2 * 1", result, div);
 	}
 }
