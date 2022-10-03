@@ -24,7 +24,7 @@ Vamos trabalhar com o framework Junit na versão 4. Também utilizaremos da téc
 
 Utilizaremos a Eclipse IDE 2022-09, com a JDK na versão 1.5. Por padrão, o EclEmma já vem instalado nessa IDE.
 
-##Projeto simples - Calculadora 
+## Projeto simples - Calculadora 
 
 Desenvolvemos um pequeno e simples projeto de exemplo para analisarmos o funcionamento da ferramenta de cobertura.
 
